@@ -1,0 +1,58 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Uss/MenuScreen.uss?fileID=7433441132597879392&amp;guid=4fe79790bca7b40de89a2c0f57f3ea4d&amp;type=3#MenuScreen" />
+    <engine:VisualElement name="menu__container" picking-mode="Ignore" style="flex-grow: 1; align-items: center; background-color: rgb(217, 217, 217); align-content: flex-start; justify-content: space-between;">
+        <engine:VisualElement name="menu__background" picking-mode="Ignore" style="flex-grow: 1; width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
+        <engine:Label text="Menu" name="menu__menu-text" style="top: 5%; font-size: 50px; -unity-font-definition: url(&quot;project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&amp;guid=8e475c706d95f4949ac886061d6aa7b2&amp;type=2#SuperTheory SDF&quot;);" />
+        <engine:Button text="Setting" name="menu__setting-button" class="setting-button menu-button" style="position: absolute; right: 5%; top: 5%; width: 10%; flex-shrink: 1; height: auto; font-size: 30px;" />
+        <engine:VisualElement name="menu__page-containers" style="flex-grow: 0; align-items: center; width: 70%; height: 60%;">
+            <engine:VisualElement name="menu__home-page-container" picking-mode="Ignore" class="page-container" style="flex-grow: 0; top: auto; left: auto; right: auto; bottom: auto; position: absolute; width: 100%; height: 100%; align-items: stretch;">
+                <engine:Label text="Home Page" name="menu__home-page-text" style="color: rgb(217, 217, 217); -unity-font-definition: url(&quot;project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&amp;guid=8e475c706d95f4949ac886061d6aa7b2&amp;type=2#SuperTheory SDF&quot;); font-size: 50px;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="menu__games-page-container" picking-mode="Ignore" class="page-container" style="flex-grow: 0; top: auto; left: auto; right: auto; bottom: auto; position: absolute; width: 100%; height: 100%; display: flex;">
+                <engine:Label text="Games Page" name="menu__games-page-text" style="color: rgb(217, 217, 217); -unity-font-definition: url(&quot;project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&amp;guid=8e475c706d95f4949ac886061d6aa7b2&amp;type=2#SuperTheory SDF&quot;); font-size: 50px;" />
+                <engine:VisualElement name="menu__game-type-one-group" class="game-group">
+                    <engine:Label text="Game Type 1" name="game-type-one-text" class="game-type-text" />
+                    <engine:VisualElement name="menu__game-one-container" style="flex-grow: 1; flex-direction: row; justify-content: flex-start;">
+                        <engine:Button text="Game 1" name="menu__game-one-one-button" class="game-button" />
+                        <engine:Button text="Game 2" name="menu__game-one-two-button" class="game-button" />
+                        <engine:Button text="Game 3" name="menu__game-one-three-button" class="game-button" />
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                <engine:VisualElement name="menu__game-type-two-group" class="game-group">
+                    <engine:Label text="Game Type 2" name="menu__game-type-two-text" class="game-type-text" />
+                    <engine:VisualElement name="menu__game-two-container" style="flex-grow: 1; flex-direction: row; justify-content: flex-start;">
+                        <engine:Button text="Game 1" name="menu__game-two-one-button" class="game-button" />
+                        <engine:Button text="Game 2" name="menu__game-two-two-button" class="game-button" />
+                        <engine:Button text="Game 3" name="menu__game-two-three-button" class="game-button" />
+                    </engine:VisualElement>
+                </engine:VisualElement>
+            </engine:VisualElement>
+            <engine:VisualElement name="menu__stats-page-container" picking-mode="Ignore" class="page-container" style="flex-grow: 0; top: auto; left: auto; right: auto; bottom: auto; position: absolute; width: 100%; height: 100%; display: none;">
+                <engine:Label text="Stats Page" name="menu__stats-page-text" style="color: rgb(217, 217, 217); -unity-font-definition: url(&quot;project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&amp;guid=8e475c706d95f4949ac886061d6aa7b2&amp;type=2#SuperTheory SDF&quot;); font-size: 50px;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="menu__insights-page-container" picking-mode="Ignore" class="page-container" style="flex-grow: 0; top: auto; left: auto; right: auto; bottom: auto; position: absolute; width: 100%; height: 100%; display: none;">
+                <engine:Label text="Insights Page" name="menu__insights-page-text" style="color: rgb(217, 217, 217); -unity-font-definition: url(&quot;project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&amp;guid=8e475c706d95f4949ac886061d6aa7b2&amp;type=2#SuperTheory SDF&quot;); font-size: 50px;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="menu__more-page-container" picking-mode="Ignore" class="page-container" style="flex-grow: 0; top: auto; left: auto; right: auto; bottom: auto; position: absolute; width: 100%; height: 100%; display: none;">
+                <engine:Label text="More Page" name="menu__more-page-text" style="color: rgb(217, 217, 217); -unity-font-definition: url(&quot;project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&amp;guid=8e475c706d95f4949ac886061d6aa7b2&amp;type=2#SuperTheory SDF&quot;); font-size: 50px;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="menu__button-container" style="flex-grow: 0; flex-basis: auto; width: 50%; height: 10%; align-content: flex-start; bottom: 5%; flex-direction: row; top: auto; position: relative; left: auto; right: auto; justify-content: space-between;">
+            <engine:Button text="Home" name="menu__home-button" class="menu-button">
+                <engine:VisualElement name="menu__home-image" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Sprites/ImagePlaceholder.png?fileID=21300000&amp;guid=d8139804373e54c6b8d997e2c015506a&amp;type=3#ImagePlaceholder&quot;); -unity-background-scale-mode: scale-to-fit; flex-basis: auto; width: 100%; height: 66%;" />
+            </engine:Button>
+            <engine:Button text="Games" name="menu__games-button" class="menu-button">
+                <engine:VisualElement name="menu__games-image" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Sprites/ImagePlaceholder.png?fileID=21300000&amp;guid=d8139804373e54c6b8d997e2c015506a&amp;type=3#ImagePlaceholder&quot;); -unity-background-scale-mode: scale-to-fit; flex-basis: auto; width: 100%; height: 66%;" />
+            </engine:Button>
+            <engine:Button text="Stats" name="menu__stats-button" class="menu-button">
+                <engine:VisualElement name="menu__stats-image" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Sprites/ImagePlaceholder.png?fileID=21300000&amp;guid=d8139804373e54c6b8d997e2c015506a&amp;type=3#ImagePlaceholder&quot;); -unity-background-scale-mode: scale-to-fit; flex-basis: auto; width: 100%; height: 66%;" />
+            </engine:Button>
+            <engine:Button text="Insights" name="menu__insights-button" class="menu-button">
+                <engine:VisualElement name="menu__insights-image" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Sprites/ImagePlaceholder.png?fileID=21300000&amp;guid=d8139804373e54c6b8d997e2c015506a&amp;type=3#ImagePlaceholder&quot;); -unity-background-scale-mode: scale-to-fit; flex-basis: auto; width: 100%; height: 66%;" />
+            </engine:Button>
+            <engine:Button text="More" name="menu__more-button" class="menu-button">
+                <engine:VisualElement name="menu__more-image" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Sprites/ImagePlaceholder.png?fileID=21300000&amp;guid=d8139804373e54c6b8d997e2c015506a&amp;type=3#ImagePlaceholder&quot;); -unity-background-scale-mode: scale-to-fit; flex-basis: auto; width: 100%; height: 66%;" />
+            </engine:Button>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

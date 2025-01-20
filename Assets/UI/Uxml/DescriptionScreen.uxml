@@ -1,0 +1,14 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Uss/DescriptionScreen.uss?fileID=7433441132597879392&amp;guid=2960326790d5d4fb2a8985c501b299b7&amp;type=3#DescriptionScreen" />
+    <engine:VisualElement name="description__container" picking-mode="Ignore" style="flex-grow: 1; align-items: center;">
+        <engine:VisualElement name="description__background" picking-mode="Ignore" style="flex-grow: 1; width: 100%; height: 100%;" />
+        <engine:VisualElement name="description__group" style="flex-grow: 1; position: absolute; width: 100%; height: 100%; align-items: center; justify-content: center;">
+            <engine:VisualElement name="description__panel" style="flex-grow: 0; background-color: rgb(217, 217, 217); width: 45%; height: 50%; position: relative; align-items: center; justify-content: flex-start; padding-top: 2%; padding-bottom: 2%; padding-right: 3%; padding-left: 3%;">
+                <engine:Button text="X" name="description__close-button" class="closeButton" style="-unity-font-definition: url(&quot;project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&amp;guid=8e475c706d95f4949ac886061d6aa7b2&amp;type=2#SuperTheory SDF&quot;); position: absolute; right: 0; font-size: 25px; top: 0;" />
+                <engine:Label text="Game Title" name="description__game-title" style="-unity-font-definition: url(&quot;project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&amp;guid=8e475c706d95f4949ac886061d6aa7b2&amp;type=2#SuperTheory SDF&quot;); font-size: 40px;" />
+                <engine:Label text="Game descriptions... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." name="description__game-content" style="font-size: 20px; white-space: normal; text-overflow: clip;" />
+                <engine:Button text="START" name="description__start-button" class="startButton" style="bottom: 10%; position: absolute; -unity-font-definition: url(&quot;project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&amp;guid=8e475c706d95f4949ac886061d6aa7b2&amp;type=2#SuperTheory SDF&quot;); font-size: 25px;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

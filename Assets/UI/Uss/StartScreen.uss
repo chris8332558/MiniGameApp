@@ -1,0 +1,31 @@
+.start-button {
+    color: rgb(66, 65, 66);
+    transition-duration: 0.15s;
+    -unity-font-definition: url("project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&guid=8e475c706d95f4949ac886061d6aa7b2&type=2#SuperTheory SDF");
+    font-size: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.start-button:hover {
+    color: rgb(217, 217, 217);
+    background-color: rgb(66, 65, 66);
+    -unity-font-definition: url("project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&guid=8e475c706d95f4949ac886061d6aa7b2&type=2#SuperTheory SDF");
+    transition-duration: 0.2s;
+    transform-origin: center;
+    font-size: 50px;
+}
+
+.start-button:active {
+    scale: 0.9 0.9;
+    transition-duration: 0.15s;
+}
+
+.unity-button {
+}
+
+.unity-text-element {
+}

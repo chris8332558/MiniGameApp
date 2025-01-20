@@ -1,0 +1,14 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="SplashScreen" src="project://database/Assets/UI/Uxml/SplashScreen.uxml?fileID=9197481963319205126&amp;guid=1813beb668ba746bb985f988027b87ce&amp;type=3#SplashScreen" />
+    <engine:Template name="StartScreen" src="project://database/Assets/UI/Uxml/StartScreen.uxml?fileID=9197481963319205126&amp;guid=747c5ca9f124b4682bd1c3353793730d&amp;type=3#StartScreen" />
+    <engine:Template name="MainMenuScreen" src="project://database/Assets/UI/Uxml/MenuScreen.uxml?fileID=9197481963319205126&amp;guid=2d50857ee4b59408290e4693f9e7778f&amp;type=3#MenuScreen" />
+    <engine:Template name="SettingScreen" src="project://database/Assets/UI/Uxml/SettingScreen.uxml?fileID=9197481963319205126&amp;guid=12ab3432e262a4d73932e1ed41cd487a&amp;type=3#SettingScreen" />
+    <engine:Template name="GameScreen" src="project://database/Assets/UI/Uxml/GameScreen.uxml?fileID=9197481963319205126&amp;guid=73c64c9db951e4b4c9f7b8aa217b95ca&amp;type=3#GameScreen" />
+    <engine:Template name="DescriptionScreen" src="project://database/Assets/UI/Uxml/DescriptionScreen.uxml?fileID=9197481963319205126&amp;guid=bfc5149143a064491be9a805bbecf20e&amp;type=3#DescriptionScreen" />
+    <engine:Instance template="SplashScreen" name="SplashScreen" picking-mode="Ignore" style="width: 100%; height: 100%; display: flex; overflow: visible; position: absolute;" />
+    <engine:Instance template="StartScreen" name="StartScreen" picking-mode="Ignore" style="display: flex; width: 100%; height: 100%; position: absolute;" />
+    <engine:Instance template="MainMenuScreen" name="MenuScreen" picking-mode="Ignore" style="position: absolute; width: 100%; height: 100%; display: flex;" />
+    <engine:Instance template="SettingScreen" name="SettintScreen" picking-mode="Ignore" style="position: absolute; width: 100%; height: 100%;" />
+    <engine:Instance template="GameScreen" name="GameScreen" />
+    <engine:Instance template="DescriptionScreen" name="DescriptionScreen" picking-mode="Ignore" />
+</engine:UXML>

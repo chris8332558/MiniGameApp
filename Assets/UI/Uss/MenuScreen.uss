@@ -1,0 +1,62 @@
+.menu-button {
+    width: 15%;
+    -unity-font-definition: url("project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&guid=8e475c706d95f4949ac886061d6aa7b2&type=2#SuperTheory SDF");
+    font-size: 25px;
+    color: rgb(66, 65, 66);
+    -unity-text-align: lower-center;
+    -unity-text-outline-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 255, 255, 0);
+    transition-duration: 0.1s;
+}
+
+.menu-button:hover {
+    scale: 1.1 1.1;
+    transition-duration: 0.2s;
+}
+
+.menu-button:active {
+    background-color: rgb(185, 185, 185);
+    transition-duration: 0.1s;
+    transform-origin: center;
+    scale: 0.95 0.95;
+}
+
+.page-container {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    background-color: rgba(66, 65, 66, 0.5);
+}
+
+.game-button {
+    background-color: rgb(217, 217, 217);
+    margin-left: 14px;
+    font-size: 16px;
+    margin-right: 14px;
+}
+
+.game-group {
+    flex-grow: 0;
+    flex-direction: column;
+    width: auto;
+    height: 20%;
+    justify-content: flex-start;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.game-type-text {
+    -unity-font-definition: url("project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&guid=8e475c706d95f4949ac886061d6aa7b2&type=2#SuperTheory SDF");
+    font-size: 24px;
+}
+
+.game-button:hover {
+    scale: 1.1 1.1;
+    transition-duration: 0.2s;
+}
+
+.game-button:active {
+    scale: 0.9 0.9;
+}

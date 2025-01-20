@@ -1,0 +1,23 @@
+.loading-text {
+    -unity-font-definition: url("project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&guid=8e475c706d95f4949ac886061d6aa7b2&type=2#SuperTheory SDF");
+    color: rgb(66, 65, 66);
+    font-size: 70px;
+    width: 100%;
+    align-items: stretch;
+    -unity-text-align: upper-center;
+}
+
+.unity-progress-bar {
+    width: 100%;
+}
+
+.unity-progress-bar__background {
+    background-color: rgb(255, 255, 255);
+}
+
+.unity-progress-bar__title {
+}
+
+.unity-progress-bar__progress {
+    background-color: rgb(66, 65, 66);
+}

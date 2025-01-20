@@ -1,0 +1,11 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Uss/StartScreen.uss?fileID=7433441132597879392&amp;guid=5c96772863d204de19f0f69e6faff8a7&amp;type=3#StartScreen" />
+    <engine:VisualElement name="start__container" picking-mode="Ignore" style="flex-grow: 1; align-items: center; justify-content: center; background-color: rgb(217, 217, 217); width: 100%; height: 100%;">
+        <engine:VisualElement name="start__group" style="flex-grow: 0; align-items: center; justify-content: center; align-content: flex-start; width: 33%; height: 80%;">
+            <engine:VisualElement name="start__header-bar" style="flex-grow: 0; background-color: rgb(66, 65, 66); width: 100%; flex-basis: 10%; margin-bottom: 0; bottom: 5%;" />
+            <engine:Button text="START" name="start__start-button" class="start-button" style="width: 100%;" />
+            <engine:VisualElement name="start__footer-bar" style="flex-grow: 0; width: 100%; background-color: rgb(66, 65, 66); flex-basis: 10%; top: 5%;" />
+        </engine:VisualElement>
+        <engine:Label text="© 2025 EverBellum" name="start__copyright-text" parse-escape-sequences="false" enable-rich-text="true" emoji-fallback-support="false" style="-unity-font-definition: url(&quot;project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&amp;guid=8e475c706d95f4949ac886061d6aa7b2&amp;type=2#SuperTheory SDF&quot;); font-size: 35px; height: 50px; bottom: 0;" />
+    </engine:VisualElement>
+</engine:UXML>

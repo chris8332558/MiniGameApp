@@ -1,0 +1,45 @@
+.vol-slider {
+    width: 100%;
+    height: 30%;
+    -unity-font-definition: url("project://database/Assets/UI/Font/SuperTheory%20SDF.asset?fileID=11400000&guid=8e475c706d95f4949ac886061d6aa7b2&type=2#SuperTheory SDF");
+    font-size: 35px;
+    align-self: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+#unity-tracker {
+    height: 15px;
+}
+
+#unity-dragger {
+    width: 5%;
+    height: 80%;
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+#unity-dragger:hover {
+    background-color: rgb(255, 255, 255);
+    scale: 1.1 1.1;
+}
+
+.close-button:hover {
+    scale: 1.1 1.1;
+    background-color: rgba(166, 166, 166, 0.5);
+}
+
+.close-button {
+    background-color: rgb(217, 217, 217);
+}
+
+.close-button:active {
+    scale: 0.9 0.9;
+}
