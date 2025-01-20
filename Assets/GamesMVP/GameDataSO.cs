@@ -12,8 +12,16 @@ namespace Chris
     {
         [SerializeField] int m_SceneIdx;
         [SerializeField] GameType m_GameType;
+        [SerializeField] int m_GameIdx;
         [SerializeField] string m_Title;
         [SerializeField] Sprite m_Icon;
-        [TextArea(5, 8)][SerializeField] string m_Discription;
+        [TextArea(5, 8)][SerializeField] string m_Description;
+
+        public int SceneIdx => m_SceneIdx;
+        public string Title => m_Title;
+        public Sprite Icon => m_Icon;
+        public string Description => m_Description;
+        public GameType GameType => m_GameType;
+        public int GameIdx => m_GameIdx;
     }
 }

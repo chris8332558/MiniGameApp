@@ -20,12 +20,12 @@ namespace Chris
             m_MusicVolSlider = m_RootElement.Q<Slider>("setting__music-vol-slider");
             m_CloseButton = m_RootElement.Q<Button>("setting__close-button");
 
-            // Initial setting
+            // Initial setting, set the slider's value when the screen pop up
             SettingEvents.MasterSliderSet += OnMasterSliderSet;
             SettingEvents.SFXSliderSet += OnSFXSliderSet;
             SettingEvents.MusicSliderSet += OnMusicSliderSet;
 
-            // Setting by the sliders
+            // Register callebacks, setting by the sliders
             m_MasterVolSlider.RegisterCallback<ChangeEvent<float>>(OnMasterSliderChanged);
             m_SFXVolSlider.RegisterCallback<ChangeEvent<float>>(OnSFXSliderChanged);
             m_MusicVolSlider.RegisterCallback<ChangeEvent<float>>(OnMusicSliderChanged);

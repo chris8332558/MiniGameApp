@@ -9,6 +9,6 @@
     <engine:Instance template="StartScreen" name="StartScreen" picking-mode="Ignore" style="display: flex; width: 100%; height: 100%; position: absolute;" />
     <engine:Instance template="MainMenuScreen" name="MenuScreen" picking-mode="Ignore" style="position: absolute; width: 100%; height: 100%; display: flex;" />
     <engine:Instance template="SettingScreen" name="SettintScreen" picking-mode="Ignore" style="position: absolute; width: 100%; height: 100%;" />
+    <engine:Instance template="DescriptionScreen" name="DescriptionScreen" picking-mode="Ignore" style="width: 100%; height: 100%; position: absolute;" />
     <engine:Instance template="GameScreen" name="GameScreen" />
-    <engine:Instance template="DescriptionScreen" name="DescriptionScreen" picking-mode="Ignore" />
 </engine:UXML>

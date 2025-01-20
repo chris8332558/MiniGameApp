@@ -24,29 +24,27 @@ namespace Chris
             m_TypeOneGameOneButton = m_GameOneContainer.Q<Button>("menu__game-one-one-button");
             m_TypeTwoGameOneButton = m_GameTwoContainer.Q<Button>("menu__game-two-one-button");
 
-            // For test
+            // For test, will change to set the button's callback automatically
             m_GameOneButtons = m_GameOneContainer.Query<Button>(className: "game-button").ToList();
             foreach (var b in m_GameOneButtons)
             {
                 Debug.Log(b.name); // e.g. menu__game-one-one-button
             }
 
-            m_TypeOneGameOneButton.RegisterCallback<ClickEvent>(OnGameOneStart);
-            m_TypeTwoGameOneButton.RegisterCallback<ClickEvent>(OnGameTwoStart);
+            m_TypeOneGameOneButton.RegisterCallback<ClickEvent>(OnGameOneOneClicked);
+            m_TypeTwoGameOneButton.RegisterCallback<ClickEvent>(OnGameTwoOneClicked);
         }
 
-        private void OnGameOneStart(ClickEvent evt)
+        private void OnGameOneOneClicked(ClickEvent evt)
         {
-            Debug.Log("Type 1 Game 1 start");
-            UIEvents.GameScreenShow?.Invoke();
-            SceneEvents.LoadSceneByIndex?.Invoke(1);
+            UIEvents.DescriptionScreenShow?.Invoke();
+            DescriptionEvents.DescriptionChanged?.Invoke(GameType.Type1, 0); // Should be a better way, not hard coded
 		}
 
-        private void OnGameTwoStart(ClickEvent evt)
-        { 
-            Debug.Log("Type 2 Game 1 start");
-            UIEvents.GameScreenShow?.Invoke();
-            SceneEvents.LoadSceneByIndex?.Invoke(2);
+        private void OnGameTwoOneClicked(ClickEvent evt)
+        {
+            UIEvents.DescriptionScreenShow?.Invoke();
+            DescriptionEvents.DescriptionChanged?.Invoke(GameType.Type2, 0);
 		}
     }
 }

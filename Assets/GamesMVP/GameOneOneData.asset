@@ -16,6 +16,4 @@ MonoBehaviour:
   m_GameType: 0
   m_Title: GameOneOne
   m_Icon: {fileID: 0}
-  m_Discription: 'GameOneOne Description here...
-
-'
+  m_Description: Type-1 Game-1 Description...
