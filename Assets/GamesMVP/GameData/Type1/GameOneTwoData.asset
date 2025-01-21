@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b49bbef22134476f927510b3b651ae4, type: 3}
-  m_Name: GameTwoOneData
+  m_Name: GameOneTwoData
   m_EditorClassIdentifier: 
   m_SceneIdx: 2
-  m_GameType: 1
-  m_Title: GameTwoOne
+  m_ScenePath: 
+  m_GameType: 0
+  m_Title: GameOneTwo
   m_Icon: {fileID: 0}
-  m_Description: Type-2 Game-1 Description...
+  m_Description: Type-1 Game-2 Description...

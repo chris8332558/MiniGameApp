@@ -36,10 +36,10 @@ namespace Chris
 
         private void OnStartButtonClicked(ClickEvent e)
         {
-            UIEvents.CloseScreen?.Invoke(); // Close the Descrription screen first
+            UIEvents.CloseScreen?.Invoke(); // Close the Description screen first
             UIEvents.GameScreenShow?.Invoke();
             Debug.Log("Start Game: " + m_GameSceneIndex);
-            SceneEvents.LoadSceneByIndex?.Invoke(m_GameSceneIndex);
+            SceneEvents.LoadSceneByIndex?.Invoke(m_GameSceneIndex); // TODO: Use path name instead
 		}
 
         private void OnGameTitleSet(string title)

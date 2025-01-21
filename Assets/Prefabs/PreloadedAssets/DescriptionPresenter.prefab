@@ -47,8 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GameDataSOTypeOne:
   - {fileID: 11400000, guid: 5ae1adebc334049ddb2ffe8e19b0f109, type: 2}
+  - {fileID: 11400000, guid: 268939a607c9d4451a2257dd713febe7, type: 2}
   m_GameDataSOTypeTwo:
   - {fileID: 11400000, guid: df52972b92be0457a9c48ff82650a988, type: 2}
+  - {fileID: 11400000, guid: 405bc765c01504ff496c75f74b6dc456, type: 2}
 --- !u!114 &5966999459790903187
 MonoBehaviour:
   m_ObjectHideFlags: 0

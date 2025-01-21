@@ -19,7 +19,7 @@ namespace Chris
         SplashState m_SplashScreenState = new();
         StartState m_StartScreenState = new();
         MenuState m_MenuScreenState = new();
-        SettingState m_SettingScreenState = new();
+        //SettingState m_SettingScreenState = new();
         GameState m_GameState = new();
 
         private void Awake()
@@ -46,10 +46,10 @@ namespace Chris
         {
             m_SplashScreenState.AddLink(new Link(m_StartScreenState));
             m_StartScreenState.AddLink(new Link(m_MenuScreenState, ref UIEvents.MenuScreenShow));
-            m_MenuScreenState.AddLink(new Link(m_SettingScreenState, ref UIEvents.SettingScreenShow));
+            //m_MenuScreenState.AddLink(new Link(m_SettingScreenState, ref UIEvents.SettingScreenShow));
             m_MenuScreenState.AddLink(new Link(m_GameState, ref UIEvents.GameScreenShow));
-            m_SettingScreenState.AddLink(new Link(m_MenuScreenState, ref UIEvents.CloseScreen));
-            m_GameState.AddLink(new Link(m_MenuScreenState, ref UIEvents.CloseScreen));
+            //m_SettingScreenState.AddLink(new Link(m_MenuScreenState, ref UIEvents.CloseScreen));
+            m_GameState.AddLink(new Link(m_MenuScreenState, ref SceneEvents.UnloadLastScene));
 		}
 
         private void InstPreloadedAssets()
