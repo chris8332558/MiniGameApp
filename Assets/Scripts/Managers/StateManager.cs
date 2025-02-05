@@ -50,6 +50,7 @@ namespace Chris
             m_MenuScreenState.AddLink(new Link(m_GameState, ref UIEvents.GameScreenShow));
             //m_SettingScreenState.AddLink(new Link(m_MenuScreenState, ref UIEvents.CloseScreen));
             m_GameState.AddLink(new Link(m_MenuScreenState, ref SceneEvents.UnloadLastScene));
+            m_GameState.AddLink(new Link(m_MenuScreenState, ref GameEvents.GameEnded));
 		}
 
         private void InstPreloadedAssets()

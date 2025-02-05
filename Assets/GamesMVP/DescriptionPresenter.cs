@@ -35,8 +35,10 @@ namespace Chris
             if (game != null)
             {
                 DescriptionEvents.GameTitleSet?.Invoke(game.Title);
+                DescriptionEvents.GameplayTimeSet?.Invoke(game.GamePlayTime);
                 DescriptionEvents.DescriptionSet?.Invoke(game.Description);
                 DescriptionEvents.GameSceneIdxSet?.Invoke(game.SceneIdx);
+                GameEvents.GameplayTimeSet?.Invoke(game.GamePlayTime);
             }
         }
     }

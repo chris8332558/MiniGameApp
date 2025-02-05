@@ -16,5 +16,6 @@ MonoBehaviour:
   m_ScenePath: 
   m_GameType: 1
   m_Title: GameTwoTwo
+  m_GameplayTime: 8
   m_Icon: {fileID: 0}
   m_Description: Type-2 Game-2 Description...

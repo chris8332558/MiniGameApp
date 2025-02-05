@@ -9,7 +9,7 @@ namespace Chris
         Label m_GameplayTimeText;
         Label m_ScoreText;
 
-        float m_InitGameplayTime = 2 * 60 + 30; // Time in seconds (2:30 in this case)
+        float m_CurrGameplayTime = 0; // Time in seconds
         int m_InitScore = 0;
 
         public GameScreen(VisualElement root, bool isTransparent = false): base(root, isTransparent)
@@ -18,9 +18,12 @@ namespace Chris
             m_GameplayTimeText = root.Q<Label>("game__gameplay-time-text");
             m_ScoreText = root.Q<Label>("game__score-text");
 
-            m_GameplayTimeText.text = FormatTime(m_InitGameplayTime);
-            m_ScoreText.text = FormatScore(m_InitScore);
+            m_GameplayTimeText.text = Helper.FormatTime(0);
+            m_ScoreText.text = Helper.FormatScore(m_InitScore);
             m_BackButton.RegisterCallback<ClickEvent>(OnBackButtonClicked);
+
+            GameEvents.GameplayTimeSet += OnGameplayTimeSet;
+            GameEvents.GameplayTimeTicked += OnGameplayTimeTicked;
 		}
 
         private void OnBackButtonClicked(ClickEvent evt)
@@ -29,18 +32,21 @@ namespace Chris
             UIEvents.CloseScreen(); // Close GameScreen
 		}
 
-        private string FormatTime(float time)
+        private void OnGameplayTimeSet(float time)
         {
-            int minutes = (int)time / 60;
-            int seconds = (int)time - 60 * minutes;
-            return string.Format("{0:00}:{1:00}", minutes, seconds);
-            //int milliseconds = (int)(1000 * (time - minutes * 60 - seconds));
-            //return string.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, milliseconds);
-        }
-
-        private string FormatScore(float score)
-        {
-            return string.Format("{000000}", score);
+            m_CurrGameplayTime = time;
+            m_GameplayTimeText.text = Helper.FormatTime(m_CurrGameplayTime);
 		}
+
+        private void OnGameplayTimeTicked(float time)
+        {
+            m_CurrGameplayTime -= time;
+            m_GameplayTimeText.text = Helper.FormatTime(m_CurrGameplayTime);
+            if (m_CurrGameplayTime <= 0)
+            {
+                SceneEvents.UnloadLastScene?.Invoke();
+                UIEvents.CloseScreen(); // Close GameScreen
+            }
+        }
     }
 }

@@ -4,8 +4,6 @@ namespace Chris
 {
     public class GameState : State
     {
-        private float m_CurrentGameplayTime;  
-
         public override void Enter()
         {
             Debug.Log("Enter Game State");
@@ -14,16 +12,13 @@ namespace Chris
 
         public override void Update()
         {
+            GameEvents.GameplayTimeTicked?.Invoke(Time.deltaTime);
         }
 
         public override void Exit()
         {
-            Debug.Log("Exit Game State");
             GameEvents.GameEnded?.Invoke();
+            Debug.Log("Exit Game State");
         }
-
-        private void OnGameplayTimeSet()
-        { 
-		}
     }
 }

@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: GameOneOneData
   m_EditorClassIdentifier: 
   m_SceneIdx: 1
+  m_ScenePath: 
   m_GameType: 0
   m_Title: GameOneOne
+  m_GameplayTime: 10
   m_Icon: {fileID: 0}
   m_Description: Type-1 Game-1 Description...
