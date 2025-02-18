@@ -7,27 +7,29 @@ namespace Chris
 {
     public class GameState : State
     {
-        bool isGameStarted;
+        float m_CoundownTime = 3f;
 
         public override void Enter()
         {
             Debug.Log("Enter Game State");
-            GameEvents.GameStarted?.Invoke();
 		}
 
         public override void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space)) isGameStarted = true; // Will change to wait 3 seconds
-            if (isGameStarted)
+            if (m_CoundownTime >= 0)
             {
-                GameEvents.GameplayTimeTicked?.Invoke(Time.deltaTime);
+                m_CoundownTime -= Time.deltaTime;
+                SceneEvents.GameStartCountdownTextUpdated?.Invoke(m_CoundownTime.ToString("0"));
             }
-
+            else
+            {
+                SceneEvents.GameStartCountdownCompleted?.Invoke();
+                GameEvents.GameStarted?.Invoke();
+            }
         }
 
         public override void Exit()
         {
-            GameEvents.GameEnded?.Invoke();
             Debug.Log("Exit Game State");
         }
     }

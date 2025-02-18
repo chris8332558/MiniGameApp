@@ -15,6 +15,10 @@ namespace Chris
         // Start Scene
         public static Action StartButtonClicked;
 
+        // Game Scene
+        public static Action<string> GameStartCountdownTextUpdated; 
+        public static Action GameStartCountdownCompleted; 
+
         // Load and Unload scene additively
         public static Action<int> LoadSceneByIndex;
         public static Action UnloadLastScene;
