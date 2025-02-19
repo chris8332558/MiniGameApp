@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Chris;
 
 public class EnergySpawner : MonoBehaviour
 {
@@ -10,14 +11,28 @@ public class EnergySpawner : MonoBehaviour
     public int spawnAmountMax;
     public float spawnWindow;
     private bool isSpawnFinished = true;
+    private bool isGameStarted;
+
+    private void OnEnable()
+    {
+        GameEvents.GameStarted += OnGameStarted;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.GameStarted -= OnGameStarted;
+    }
 
     private void Update()
     {
-        if (isSpawnFinished)
+        if (isGameStarted)
         {
-            int spawnAmount = Random.Range(spawnAmountMin, spawnAmountMax);
-            StartCoroutine(spawnEnergyRoutine(spawnAmount));
-            isSpawnFinished = false;
+            if (isSpawnFinished)
+            {
+                int spawnAmount = Random.Range(spawnAmountMin, spawnAmountMax);
+                StartCoroutine(spawnEnergyRoutine(spawnAmount));
+                isSpawnFinished = false;
+            }
         }
     }
 
@@ -39,6 +54,11 @@ public class EnergySpawner : MonoBehaviour
     {
         int idx = Random.Range(0, energyPools.Length);
         return energyPools[idx];
+	}
+
+    void OnGameStarted()
+    {
+        isGameStarted = true;
 	}
 
 }

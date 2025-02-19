@@ -36,7 +36,6 @@ public class WordGameManager : MonoBehaviour
         GameEvents.GameStarted += OnGameStarted;
     }
 
-
     private void OnDisable()
     {
         GameEvents.GameStarted -= OnGameStarted;
@@ -46,7 +45,6 @@ public class WordGameManager : MonoBehaviour
     {
         startTime = Time.time;
         isGameStarted = false;
-        SetupGame();
     }
 
     private void Update()
@@ -70,6 +68,7 @@ public class WordGameManager : MonoBehaviour
     void OnGameStarted()
     {
         isGameStarted = true;
+        SetupGame();
 	}
 
 

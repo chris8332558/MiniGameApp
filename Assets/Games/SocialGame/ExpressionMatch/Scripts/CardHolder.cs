@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
-using DG.Tweening;
+using Chris;
 
 public class CardHolder : MonoBehaviour
 {
@@ -37,6 +37,18 @@ public class CardHolder : MonoBehaviour
     private float subScoreTimer;
     private float currCardScore;
 
+    private bool isGameStarted;
+
+    private void OnEnable()
+    {
+        GameEvents.GameStarted += OnGameStarted;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.GameStarted -= OnGameStarted;
+    }
+
     private void Awake()
     {
         spRenderer = GetComponent<SpriteRenderer>();
@@ -57,27 +69,30 @@ public class CardHolder : MonoBehaviour
 
     private void Update()
     {
-        if (isSwipeDone)
+        if (isGameStarted)
         {
-            HandleSwipe();
+            if (isSwipeDone)
+            {
+                HandleSwipe();
+            }
+
+            cardScoreText.text = "Card Score: " + currCardScore.ToString();
+            subScoreTimer += Time.deltaTime;
+            if (subScoreTimer >= subScoreTime)
+            {
+                currCardScore -= 100f;
+                subScoreTimer = 0f;
+            }
+
+            if (currCardScore > 0)
+            {
+                cardScoreText.color = Color.green;
+            }
+            else
+            {
+                cardScoreText.color = Color.red;
+            }
         }
-
-        cardScoreText.text = "Card Score: " + currCardScore.ToString();
-        subScoreTimer += Time.deltaTime;
-        if (subScoreTimer >= subScoreTime)
-        {
-            currCardScore -= 100f;
-            subScoreTimer = 0f;
-		}
-
-        if (currCardScore > 0)
-        {
-            cardScoreText.color = Color.green;
-		}
-        else
-        { 
-            cardScoreText.color = Color.red;
-		}
 
 
         /*
@@ -103,6 +118,11 @@ public class CardHolder : MonoBehaviour
             transform.position = originPos;
         }
         */
+    }
+
+    void OnGameStarted()
+    {
+        isGameStarted = true;
     }
 
     private void HandleSwipe()

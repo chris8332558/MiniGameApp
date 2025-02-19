@@ -2,31 +2,33 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-
 namespace Chris
 {
     public class GameState : State
     {
-        float m_CoundownTime = 3f;
+        float m_CountdownTime = 3f;
+        bool m_GameStartedInvoked;
 
         public override void Enter()
         {
-            m_CoundownTime = 3f;
+            m_CountdownTime = 3.5f;
+            m_GameStartedInvoked = false;
             SceneEvents.GameStartCountdownStarted?.Invoke();
             Debug.Log("Enter Game State");
 		}
 
         public override void Update()
         {
-            if (m_CoundownTime >= 0)
+            if (m_CountdownTime > 0)
             {
-                m_CoundownTime -= Time.deltaTime;
-                SceneEvents.GameStartCountdownTextUpdated?.Invoke(m_CoundownTime.ToString("0"));
+                m_CountdownTime -= Time.deltaTime;
+                SceneEvents.GameStartCountdownTextUpdated?.Invoke(m_CountdownTime.ToString("0"));
             }
-            else
+            else if (!m_GameStartedInvoked)
             {
                 SceneEvents.GameStartCountdownCompleted?.Invoke();
                 GameEvents.GameStarted?.Invoke();
+                m_GameStartedInvoked = true;
             }
         }
 
