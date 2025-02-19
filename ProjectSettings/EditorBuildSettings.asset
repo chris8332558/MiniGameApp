@@ -9,17 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/GameScenes/Type1/GameOneOne.unity
+    path: Assets/Games/WordGame/WordMatch/Scene/WordMatch.unity
     guid: 197dcf4c2c0144601ba9f7883ce7d311
   - enabled: 1
-    path: Assets/Scenes/GameScenes/Type1/GameOneTwo.unity
-    guid: f2c7b8c9d9dcf4261a78636d940b9116
+    path: Assets/Games/SocialGame/ExpressionMatch/Scene/ExpressionMatch.unity
+    guid: c275c049e5b8a4bdb8e7e93d866b87b6
   - enabled: 1
-    path: Assets/Scenes/GameScenes/Type2/GameTwoOne.unity
-    guid: 8c957aceddc5d450389671ecd5748222
-  - enabled: 1
-    path: Assets/Scenes/GameScenes/Type2/GameTwoTwo.unity
-    guid: a3c64e6a0fc7a4c36b3c4031dba8690f
+    path: Assets/Games/SwitchGame/Scene/SwitchGame.unity
+    guid: db64bb164c5654eb08df1cb59c9f5121
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

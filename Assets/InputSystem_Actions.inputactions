@@ -990,6 +990,94 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "SocialGame_ExpressionMatch",
+            "id": "fbaaf4b9-0778-4945-a836-679da9f1894c",
+            "actions": [
+                {
+                    "name": "SwipeUp",
+                    "type": "Button",
+                    "id": "6f7d7fa2-9077-4035-bd14-b32d5b37c7d9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwipeDown",
+                    "type": "Button",
+                    "id": "54d4af49-fa12-48ee-9e9d-8c87116455f4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwipeLeft",
+                    "type": "Button",
+                    "id": "1011099c-a740-44a1-9881-3a6c1c928bbb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SwipeRight",
+                    "type": "Button",
+                    "id": "be466622-7812-45e4-9cd4-b8ca22e74812",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "def6d35a-9c78-4705-bb77-154bf7b00adf",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "SwipeUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "15bb68de-541d-4e8a-81d4-a397066b56a9",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "SwipeDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "23fef7b4-d309-4557-ba5d-68325bf23eb7",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "SwipeLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5d610ea8-7532-4e8b-8291-418ddcfe0a4f",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "SwipeRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
