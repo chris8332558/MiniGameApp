@@ -11,6 +11,8 @@ namespace Chris
 
         public override void Enter()
         {
+            m_CoundownTime = 3f;
+            SceneEvents.GameStartCountdownStarted?.Invoke();
             Debug.Log("Enter Game State");
 		}
 

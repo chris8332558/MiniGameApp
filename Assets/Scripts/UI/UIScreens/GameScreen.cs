@@ -28,6 +28,7 @@ namespace Chris
 
             SceneEvents.GameStartCountdownTextUpdated += OnCountDownTextUpdated;
             SceneEvents.GameStartCountdownCompleted += OnCountDownCompleted;
+            SceneEvents.GameStartCountdownStarted += OnCountDownStarted;
             GameEvents.GameplayTimeSet += OnGameplayTimeSet;
             GameEvents.GameplayTimeTicked += OnGameplayTimeTicked;
 		}
@@ -41,6 +42,12 @@ namespace Chris
         private void OnCountDownTextUpdated(string timeString)
         {
             m_GameStartCountdownText.text = timeString;
+		}
+
+        private void OnCountDownStarted()
+        {
+            m_CountdownBG.style.visibility = Visibility.Visible;
+            m_GameStartCountdownText.style.visibility = Visibility.Visible;
 		}
 
         private void OnCountDownCompleted()
